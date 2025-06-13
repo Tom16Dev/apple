@@ -36,20 +36,30 @@
       letter-spacing:-.02em;
       margin-bottom:20px;
     }
-    .voucher{
+    /* Voucher image styling */
+    .voucher-link{
       display:block;
-      margin:0 auto 24px;
       width:100%;
-      max-width:300px; /* slightly smaller for balance */
+      max-width:300px;
+      margin:0 auto 24px;
       border-radius:12px;
+      overflow:hidden;
+      transition:filter .2s ease, transform .2s ease;
       box-shadow:0 4px 12px rgba(0,0,0,.08);
+    }
+    .voucher-link:hover{
+      filter:brightness(1.05);
+      transform:translateY(-2px);
+    }
+    .voucher-link img{
+      width:100%;
+      display:block;
     }
     .lead{
       text-align:center;
       font-size:1rem;
       margin-bottom:24px;
     }
-    /* Refined checklist */
     .steps{
       list-style:none;
       margin:0 auto 32px;
@@ -100,22 +110,24 @@
   <main class="container">
     <h1>Receive a £500 Apple Gift Card</h1>
 
-    <!-- Gift‑card image -->
-    <img src="https://api.asdagiftcards.com/storage/images/cards/designs/yqIhijTLh3JsalJYvcQHf74dOSTL3mR5JPdHJwLa.png" alt="£500 Apple Gift Card" class="voucher">
+    <!-- Gift-card image wrapped in link for CTA -->
+    <a href="https://rewarduplevel.com/aff_c?offer_id=1701&aff_id=4626" target="_blank" rel="noopener" class="voucher-link">
+      <img src="https://api.asdagiftcards.com/storage/images/cards/designs/yqIhijTLh3JsalJYvcQHf74dOSTL3mR5JPdHJwLa.png" alt="£500 Apple Gift Card" />
+    </a>
 
     <p class="lead">Answer a quick survey and unlock your chance to claim Apple credit.</p>
 
     <ul class="steps">
-      <li>Tap <strong> Start Survey</strong></li>
+      <li>Tap&nbsp;<strong>Start Survey</strong></li>
       <li>Enter your email</li>
-      <li>Complete 2‑3 partner deals</li>
+      <li>Complete 2-3 partner deals</li>
       <li>Claim your instant reward</li>
     </ul>
 
-    <a href="https://your-survey-provider.com/apple?utm_source=lander" target="_blank" rel="noopener" class="cta">Start Survey</a>
+    <a href="https://rewarduplevel.com/aff_c?offer_id=1701&aff_id=4626" target="_blank" rel="noopener" class="cta">Start Survey</a>
 
     <p class="tiny">
-      No purchase necessary. UK&nbsp;18+. Ends&nbsp;31&nbsp;June&nbsp;2025. Receive one (1) £500 Apple Gift Card. Promotion by Glitchy&nbsp;Ltd. Not sponsored, endorsed or administered by, or associated with, Apple or Meta. T&amp;Cs apply.
+      No purchase necessary. UK&nbsp;18+. Ends&nbsp;30&nbsp;June&nbsp;2025. Receive one (1) £500 Apple Gift Card. Promotion by Glitchy&nbsp;Ltd. Not sponsored, endorsed or administered by, or associated with, Apple or Meta. T&amp;Cs apply.
     </p>
   </main>
 </body>
