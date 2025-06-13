@@ -6,11 +6,12 @@
   <title>Receive a £500 Apple Gift Card</title>
   <style>
     :root{
-      --primary:#0071e3;   /* Apple blue CTA */
-      --primary-hover:#0060c5;
-      --accent:#000000;    /* Headline */
-      --bg:#f5f5f7;       /* Apple light grey */
-      --text:#1d1d1f;     /* Body text */
+      /* Apple aesthetic */
+      --primary-start:#0071e3;   /* Apple blue */
+      --primary-end:#0051a8;     /* Darker tint for gradient */
+      --accent:#000000;          /* Headline */
+      --bg:#f5f5f7;             /* Apple light grey */
+      --text:#1d1d1f;           /* Body text */
     }
     *{box-sizing:border-box;margin:0;padding:0;}
     body{
@@ -37,53 +38,59 @@
     }
     .voucher{
       display:block;
-      margin:0 auto 28px;
+      margin:0 auto 24px;
       width:100%;
-      max-width:340px;
+      max-width:300px; /* slightly smaller for balance */
       border-radius:12px;
       box-shadow:0 4px 12px rgba(0,0,0,.08);
     }
     .lead{
       text-align:center;
       font-size:1rem;
-      margin-bottom:20px;
+      margin-bottom:24px;
     }
+    /* Refined checklist */
     .steps{
       list-style:none;
-      margin-bottom:28px;
+      margin:0 auto 32px;
       padding-left:0;
+      max-width:340px;
     }
     .steps li{
       font-size:1rem;
-      margin:8px 0;
-      position:relative;
-      padding-left:22px;
+      margin:10px 0;
+      display:flex;
+      align-items:flex-start;
     }
     .steps li::before{
-      content:"\f054"; /* Font Awesome arrow-right (works because fallback is ▶) */
-      font-family:"Arial";
-      position:absolute;
-      left:0;
-      top:0;
+      content:"\2713"; /* ✔︎ */
+      font-size:1.1rem;
+      color:var(--primary-start);
+      margin-right:10px;
+      line-height:1;
     }
+    /* Gradient CTA */
     .cta{
       display:block;
       width:100%;
       padding:16px 0;
-      background:var(--primary);
+      background:linear-gradient(135deg,var(--primary-start) 0%,var(--primary-end) 100%);
       color:#fff;
       text-align:center;
       font-weight:600;
       border-radius:14px;
       text-decoration:none;
       letter-spacing:.01em;
-      transition:background .2s ease, transform .2s ease;
+      transition:filter .2s ease, transform .2s ease;
     }
-    .cta:hover{background:var(--primary-hover);transform:translateY(-2px);}
+    .cta:hover{
+      filter:brightness(1.05);
+      transform:translateY(-2px);
+    }
     .tiny{
       font-size:.75rem;
       color:#666;
-      margin-top:24px;
+      margin-top:28px;
       line-height:1.4;
       text-align:center;
     }
@@ -92,7 +99,8 @@
 <body>
   <main class="container">
     <h1>Receive a £500 Apple Gift Card</h1>
-    <!-- Replace src with your hosted Apple gift-card image -->
+
+    <!-- Gift‑card image -->
     <img src="https://api.asdagiftcards.com/storage/images/cards/designs/yqIhijTLh3JsalJYvcQHf74dOSTL3mR5JPdHJwLa.png" alt="£500 Apple Gift Card" class="voucher">
 
     <p class="lead">Answer a quick survey and unlock your chance to claim Apple credit.</p>
