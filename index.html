@@ -7,11 +7,11 @@
   <style>
     :root{
       /* Apple aesthetic */
-      --primary-start:#0071e3;   /* Apple blue */
-      --primary-end:#0051a8;     /* Darker tint for gradient */
-      --accent:#000000;          /* Headline */
-      --bg:#f5f5f7;             /* Apple light grey */
-      --text:#1d1d1f;           /* Body text */
+      --primary-start:#0071e3;
+      --primary-end:#0051a8;
+      --accent:#000000;
+      --bg:#f5f5f7;
+      --text:#1d1d1f;
     }
     *{box-sizing:border-box;margin:0;padding:0;}
     body{
@@ -36,25 +36,18 @@
       letter-spacing:-.02em;
       margin-bottom:20px;
     }
-    /* Voucher image styling */
-    .voucher-link{
+    .voucher{
       display:block;
       width:100%;
       max-width:300px;
       margin:0 auto 24px;
       border-radius:12px;
-      overflow:hidden;
-      transition:filter .2s ease, transform .2s ease;
       box-shadow:0 4px 12px rgba(0,0,0,.08);
+      transition:filter .2s ease, transform .2s ease;
     }
-    .voucher-link:hover{
+    .voucher:hover{
       filter:brightness(1.05);
       transform:translateY(-2px);
-    }
-    .voucher-link img{
-      width:100%;
-      height:auto;
-      display:block;
     }
     .lead{
       text-align:center;
@@ -74,13 +67,12 @@
       align-items:flex-start;
     }
     .steps li::before{
-      content:"\2713"; /* ✔︎ */
+      content:"\2713";
       font-size:1.1rem;
       color:var(--primary-start);
       margin-right:10px;
       line-height:1;
     }
-    /* Gradient CTA */
     .cta{
       display:block;
       width:100%;
@@ -111,10 +103,8 @@
   <main class="container">
     <h1>Receive a £500 Apple Gift Card</h1>
 
-    <!-- Gift‑card image wrapped in link for CTA -->
-    <a href="https://rewarduplevel.com/aff_c?offer_id=1701&aff_id=4626" target="_blank" rel="noopener" class="voucher-link">
-      <img src="https://i.ibb.co/8nX2njPN/apple.png" alt="£500 Apple Gift Card" />
-    </a>
+    <!-- Gift-card image restored without link -->
+    <img src="https://api.asdagiftcards.com/storage/images/cards/designs/yqIhijTLh3JsalJYvcQHf74dOSTL3mR5JPdHJwLa.png" alt="£500 Apple Gift Card" class="voucher" />
 
     <p class="lead">Answer a quick survey and unlock your chance to claim Apple credit.</p>
 
